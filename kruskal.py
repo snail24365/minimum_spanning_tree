@@ -21,8 +21,6 @@ class Kruskal(object):
             if not disjoint_set.isConnected(v,w):
                 disjoint_set.union(v,w)
                 minimum_spaning_tree.append(edge)
-                
-
         self.mst = minimum_spaning_tree
 
 

@@ -1,8 +1,8 @@
-자료구조 알고리즘
-======================
-# Minimum Spanning Tree 알고리즘 종류 
+# Minimum Spanning Tree
 
-## 1. Kruskal's algorithm
+## 구현 항목 
+### 1. Kruskal's algorithm
+### 2. Prim's algorithm
 
-## 2. Prim's algorithm
-
+## 테스트 실행 및 검증
+### sh test_script.sh
