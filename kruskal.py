@@ -7,14 +7,14 @@ class Kruskal(object):
     def __init__(self, graph):
         pq = PriorityQueue()
         for edge in graph.get_edges():
-            pq.put((edge.weight, edge))
+            pq.put(edge)
 
         V = graph.get_num_node()
         disjoint_set = DisjointSet(V)
 
         minimum_spaning_tree = []
         while not pq.empty() or len(minimum_spaning_tree) < V-1:
-            weight, edge = pq.get()
+            edge = pq.get()
             v = edge.either()
             w = edge.other(v)
             

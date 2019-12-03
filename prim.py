@@ -15,7 +15,7 @@ class Prim(object):
 
 		self.visit(0)
 		while not self.pq.empty() and len(self.mst) < V-1:
-			weight, edge = self.pq.get()
+			edge = self.pq.get()
 			v = edge.either()
 			w = edge.other(v)
 			
@@ -33,7 +33,7 @@ class Prim(object):
 		self.marked[vertex] = True
 		for edge in self.graph.get_adj()[vertex]:
 			if not self.marked[edge.other(vertex)]:
-				self.pq.put((edge.weight, edge))
+				self.pq.put(edge)
 
 
 	def get_minimum_spaning_tree(self):
